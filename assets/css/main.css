@@ -1,0 +1,933 @@
+/**
+* Template Name: Medicio
+* Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
+* Updated: Aug 07 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #555555; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #3fbbc0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #444444;  /* The default color of the main navmenu links */
+  --nav-hover-color: #3fbbc0; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #3fbbc0; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f7fcfc;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+.accent-background {
+  --background-color: #3fbbc0;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #65c9cd;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/* HEADER-START*/
+
+.header{
+ position: sticky;
+ top: 0;
+}
+
+.header-title{
+  display: flex;
+  justify-content: space-between;
+  background-color:var(--nav-dropdown-hover-color);
+  color:var(--contrast-color);
+  padding-top: 10px;
+  padding-left: 110px;
+  padding-right: 110px;
+  height:40px;
+}
+
+/* HEADER-END*/
+/* Nav-bar-start */
+
+.navbar{
+ height: 75px;
+ background-color:var(--background-color);
+}
+
+.navbar li{
+  float: left;
+  list-style:none;
+  padding: 15px;
+  font-size: small;
+}
+
+.navbar li a{
+  color:var(--default-color);
+}
+
+.navbar li a:hover{
+color:var(--accent-color);
+}
+
+.nav-list{
+ margin-right: -280px;
+}
+
+.nav-list li:hover>a, .nav-list .active, .nav-list .active:focus{
+ color: var(--accent-color);
+}
+
+.navbar img{
+  margin-left: 100px;
+  margin-bottom: 15px;
+}
+
+/* navbar-button */
+.nav-bnt{
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  height: 38px;
+  width: 190px;
+  border-radius: 4px;
+  margin-right: 110px;
+  margin-bottom: 15px;
+}
+
+/* navbar-end */
+
+/* Cards (Hospital Details)-STARTS */
+
+.container-card{
+  height: 55vh;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 15px 140px;
+}
+
+.container-card p{
+  font-size:small;
+  margin-top: 16px;
+}
+
+.container-card h5{
+  margin-top: 20px;
+}
+
+.hospital-icon i{
+  font-size: xx-large;
+color: var(--accent-color);
+} 
+
+.hospital-cards{
+  background-color:var(--accent-color);
+  border: 2ps solid black;
+  height:270px;
+  width: 290px;
+  padding: 30px;
+  background-color:#fff ;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+}
+/* Cards (Hospital Details)-END */
+
+/* Emergency-START*/
+.emergency{
+  background-color:var(--accent-color);
+height: 350px;
+
+}
+.emergency-title{
+   color: var(--contrast-color);
+   font-weight: bold;
+}
+.emergency-info{
+  text-align: center;
+   color: var(--contrast-color);
+   padding: 60px;
+   text-align: center;
+}
+.emergency p{
+  margin: 10px;
+  line-height: 1;
+}
+
+.emergency-btn{
+  background-color:var(--accent-color); 
+  color: var(--contrast-color);
+   height: 48px;
+  width: 250px;
+  border-radius: 4px;
+  border-color:var(--contrast-color); 
+  margin-top: 20px;
+  border-style: solid;
+}
+.emergency-btn:hover{
+  background-color:var(--contrast-color);
+  color:var(--accent-color) ;
+}
+/* Emergency-END */
+
+ /* About Us- START */
+
+.about-us-title{
+ text-align: center;
+ font-weight: bold;  
+ text-decoration: underline;
+ text-decoration-color: var(--accent-color);
+ padding: 30px 0px
+ }
+
+.about-us-info{
+ text-align: center;
+}
+
+.about-us-item{
+  display:flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin:45px 100px;
+}
+
+.about-us-subtitle{
+  margin-left: 25px;
+}
+
+.about-us-text{
+  line-height: 0.5;
+  margin-top: 20px;
+  margin-bottom: 35px;
+ }
+
+.about-us-icon i{
+color: var(--accent-color);
+margin-right: 8px;
+}
+/* About Us-END */
+
+/* doctors/department/Research Labs/Awards-cards- START */
+
+.card-container{
+ height: 38vh;
+ display: flex;
+ justify-content:space-between;
+ align-items: center;
+ background-color: var(--background-color);
+ padding: 0 70px;
+}
+
+.card-box{
+ height: 135px;
+ width: 323px;
+ background-color:#fff;
+ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+ margin: 10px;
+ text-align: center;
+ border: 1px red;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ padding: 20px 15px;
+}
+
+.card-icon{
+ text-align: center;
+ border: 1px red;
+}
+ 
+.card-icon i{
+ color: var(--accent-color);
+ font-size: 46px;
+}
+  
+.card-name_number{
+ text-align: left;
+ padding-left: 15px;
+ margin-top: 17px;
+}
+
+.card-name_number .card-number{
+ font-weight: 700;
+ font-size: 34px ;
+ margin-bottom: 0;
+}
+
+.card-name_number .card-name{
+ font-family: var(--heading-font);
+}
+  
+  
+/* doctors/department/Research Labs/Awards-cards- END */
+
+/* CHEMICAL-INJECTION-- START */
+
+.chemical-injection{
+ display: flex;
+ margin: 100px;
+}
+
+.chemical-injection_box{
+ margin-left: 60px;
+}
+
+.chemical-injection .chemical-injection_title{
+ margin-left: 20px;
+}
+
+.chemical-injection_content{
+ font-weight: bold;
+}
+.chemical-injection_content:hover{
+ color: var(--accent-color);
+}
+.chemical-injection_img{
+ border: 2px solid #f1ebeb;
+ height: 55px;
+ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+ width: 55px;
+ border-radius: 6px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.fa-solid{
+ color: var(--accent-color);
+ float: left;
+}
+.fa-solid:hover{
+ background-color: var(--accent-color);
+ color: var(--contrast-color);
+}
+.chemical-injection .chemical-injection_subtitle{
+ margin-top: 40px;
+}
+
+/* CHEMICAL-INJECTION-- END */
+
+/* service-- START */
+
+.Service_title{
+ text-align: center;
+ margin: 45px;
+}
+
+.Service_Container{
+ height: 550px;
+}
+
+.service-card{
+ height: 180px;
+ width: 350px;
+ margin: 17px;
+}
+
+.service-card h5:hover{
+color: var(--accent-color);
+}
+
+.Service-img{
+ border: 2px solid  #f1ebeb;
+ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);   
+ height:73px;
+ width:75px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-left: 95px;
+}
+
+.Service-Box1{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 45px;
+}
+
+.Service-Box2{
+ display: flex;
+ justify-content: center; 
+}
+
+.service-card h5{
+ font-weight: bold;
+ text-align: center;
+ margin:  15px 0;
+ text-indent: -65px;
+}
+
+.service-card i{
+ color: var(--accent-color);
+ font-size: 35px;
+}
+
+/* service-- END */
+
+/* Make an Appointment--START */
+
+.Make-an-appointment{
+ text-align: center;
+ margin: 50px;
+}
+
+.Make-an-appointment-title{
+ font-weight: bold;
+}
+ 
+.Make-an-appointment-Form{
+ height:350px;
+}
+
+.Appointment-details{
+ text-align: center; 
+}
+
+.Appointment-details input{
+ border-style: solid;
+ text-indent: 10px;
+ font-size: small;
+}
+
+.Appointment-details select{
+ text-indent: 10px;
+ font-size: small;
+}
+  
+.button-3{
+ background-color: var(--accent-color);
+ color: var(--contrast-color);
+ border: none;
+ width: 14vw;
+ height:6vh;
+ border-radius: 4px;
+ margin: 20px;
+}
+
+.Appointment-date{
+ width: 390 ;
+}
+
+.Make-an-appointment-Form input{
+   width: 390px;
+   height: 42px;
+   margin: 10px;
+   border-radius: 2px;
+   border: 1px solid #bbc0c4;
+   color:#bbc0c4;
+   background-color:#fffefa;
+  }
+
+  .Make-an-appointment-Form select{
+   width: 350px;
+   height: 42px;
+   margin: 10px;
+   border-radius: 2px;
+   border: 1px solid #bbc0c4;
+   background-color:#fffefa;
+  }
+
+ .Appointment-message textarea{ 
+  margin-top: 20px;
+  width: 79vw;
+  font-size: small;
+  border: 1px solid #bbc0c4;
+  background-color:#fffefa;
+ }
+
+ /* Make an Appointment--END */ 
+
+/* departmentss-START */
+.departmentss{
+ text-align: center;
+ margin-top: 65px;
+ }
+
+.department-Container{
+ display: flex;
+ margin: 85px;
+ padding: 29px
+ }
+
+.department-list  li{
+ list-style: none;
+ padding: 10px;
+ }
+
+.department-list{
+ font-size: small;
+ font-weight: bold;
+ } 
+
+.department-list li:hover{
+ color: var(--accent-color);
+ }
+  
+.Cardiolog-title{
+ padding: 0px 60px;
+ }
+
+.Cardiolog-title h4{
+  font-weight: bold;
+ }
+
+/* departmentss-END */
+
+/* Testimonials-START */
+
+.Testimonials{
+ text-align: center;
+ margin: 65px;
+ }
+
+.Testimonials-Items{
+ height: 330px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+
+.Testimonials-text{
+ height: 280px;
+ width: 320px;
+ margin: 49px;
+ text-align: center;
+}
+
+.Testimonials-text i{
+ color: var(--accent-color);
+ font-size:x-large;
+}
+
+.Testimonials-text h5{
+ font-weight: bold;
+} 
+
+.Testimonials-text img{
+ border-radius: 50%;
+}
+
+.Testimonials-text h6{
+ font-size: small;
+}
+
+/* Testimonials-End */
+
+/* DOCTORS-- START-- */
+
+.Doctor{
+ text-align: center;
+}
+
+.Doctor-container{
+ height: 450px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.Doctor-Img{
+ background-color:#fff ;
+ box-shadow: 5px 6px 9px 1px #edecea;
+ height:380px ;
+ width: 280px;
+ margin: 15px;
+}
+ 
+.Doctor-container h6{
+ font-weight: bold;
+ text-indent: 18px;
+ margin-top: 16px;
+}
+
+.Doctor-container p{
+ font-size: small;
+ text-indent: 20px;
+ color: var(--heading-color);
+}
+  /* DOCTORS-- END-- */
+
+ /* Gallery -- START */
+
+.Gallery{
+ height: 400px;
+ margin-top: 50px;
+}
+
+.Gallery-container{
+ text-align: center;  
+}
+
+.Gallery-Img{
+ display: flex;
+ justify-content: center;
+}
+
+.Gallery-Img img{
+ margin: 10px;
+}
+
+/* Gallery -- END */
+
+/* pricing-START*/
+
+.pricing{
+ text-align: center;
+}
+
+.pricingss-container{
+ height: 450px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.pricing-card{
+ height:350px;
+ width: 260px;
+ margin: 12px;
+ border-radius: px; 
+}
+
+.pricing-containt{
+ text-align: center;
+}
+
+.pricing-containt button{
+ margin: 10px;
+ background-color: var(--accent-color);
+ border: none;
+ color: var(--contrast-color);
+ width: 125px;
+ height: 37px;
+ border-radius: 3px;
+ font-size:small;
+ font-weight: 700;
+}
+
+.pricing-bnt{
+ background-color:#f3f2f2;
+ height: 58px;
+}
+
+.pricing-bnt p{
+ padding: 12px;
+ font-weight: 400;
+} 
+
+.pricing-business_bnt{
+ background-color: var(--nav-hover-color);
+ height: 52px;
+}
+
+.pricing-business_bnt p{
+ padding: 12px;
+ font-weight: 400;
+ color: var(--contrast-color);
+
+}
+
+
+/* pricing-End*/
+
+/* Frequently Asked Questions-START*/
+
+.Frequently-Asked-Questions{
+ text-align: center;
+}
+
+.Frequently-Asked-Questions_Container input{
+ height: 60px;
+ width: 1050px;
+ font-weight:400;
+ margin: 8px;
+ border-radius: 3px;
+ margin-left: 250px;
+ border-style: solid;
+ border: 1px solid #bbc0c4;
+ padding: 15px;
+}
+
+/* Frequently Asked Questions-End*/
+
+/* Contact Box -- START */
+
+.Contact{
+ text-align: center;
+}
+
+.Contact-container{
+ height: 540px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.Contact-Box{ 
+ height: 420px;
+ width: 540px;
+ margin: 10px;
+ justify-content: center;
+ text-align: center;
+}
+
+.Contact-Address{
+ width: 540px;
+ height: 180px;
+ margin-bottom: 15px;
+ background-color:#fff ;
+ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+ padding-top: 50px;
+}
+
+.address-img{
+ border: 2px dotted;
+ height: 23px;
+ width: 23px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ padding: 23px;
+}
+
+.Contact-call-email-Box{
+ display: flex;
+}
+
+.contact-small-box{
+ background-color:#fff ;
+ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+ width: 281px;
+ height: 188px;
+ padding-top: 50px;
+}
+
+.contact-small-box i{
+ color: var(--accent-color);
+}
+
+.contact-callus{
+ margin-right: 10px;
+}
+
+.contact-emailus{
+ margin-left: 10px;
+}
+
+.callus-img{
+ border: 2px dotted ;
+ height: 20px;
+ width:20px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ padding: 23px;
+}
+
+.emailus-img{
+ border: 2px dotted ;
+ height: 20px;
+ width:20px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ padding: 23px;
+}
+
+.Contact-Box-2{
+ background-color:#fff ;
+ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+ height: 384px;
+ width: 540px;
+ padding: 30px;
+ margin-top: -33px;
+}
+
+.Contact-Box-2 input{
+ height: 42px;
+ text-indent: 16px;
+ border: 1px solid #bbc0c4;
+ font-size: small;
+ text-indent: 12px;
+ margin-bottom: 25px;
+}
+
+.Contact-Box-2 button{
+ background-color: var(--accent-color);
+ border: none;
+ height: 45px;
+ width: 174px;
+ color: var(--contrast-color);
+ border-radius: 4px;
+ margin-top: 20px;
+}
+
+.Contact-Name-Email{
+ display: flex;
+ justify-content: space-between;
+ column-gap: 15px;
+}
+
+.Contact-Name-Email input{
+ width: 50%;
+}
+
+.Contact-Name-Email{
+ margin-top: 20px;
+}
+   
+.Contact-Subject{
+ width: 100%;
+}
+
+.bi-geo-alt{
+ font-size: x-large;
+}
+
+.bi-telephone{
+ font-size: x-large;
+} 
+
+.bi-envelope{
+ font-size: x-large;
+}
+  
+/* Contact Box -- END */
+
+/* Medicio -- START-- */
+
+.medicio-container{
+ display: flex;
+ justify-content: center;
+ margin: 53px;
+ }
+ 
+.medicio-container ul{
+ list-style: none;
+ line-height: 2;
+ font-size: small;
+}
+
+.medicio-title{
+ margin: 10px 90px;
+}
+
+.medicio-subtitle{
+ font-size: small;
+ line-height: 1;
+}
+
+.medicio-icon_container{
+ display: flex;
+ justify-content: space-between;
+}
+
+.medicio-icon{
+ font-size: 20px;
+ border: 1px solid black;
+ padding:  10px;
+ margin: 0px 5px ;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+}
+
+.medicio-card{
+ margin: 15px;
+}
+
+.medicio-card li:hover{
+ color: var(--accent-color)
+}
+
+/* Medicio -- End-- */
+
+/* last box */
+
+.Last-container{
+ text-align: center;
+ height: 70px;
+ margin: 20px;
+font-size: small;
+}
+
+
+
+/* last box */
+ 
+  
+  
+  
+ 
