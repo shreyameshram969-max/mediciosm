@@ -26,6 +26,10 @@
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -40,15 +44,14 @@
 </head>
 
 <body>
-  <div>
+  <div class="main-container">
     <!-- HEADER-START -->
 
     <div class="header">
     <div class="header-title">
-    <p><i class="bi bi-clock me-1"></i>Monday - Saturday, 8AM to 10PM </p>
-    <p><i class="bi bi-phone me-1"></i>Call us now +1 5589 55488 55</p>
+    <p class="header-info" ><i class="bi bi-clock me-1"></i>Monday - Saturday, 8AM to 10PM </p>
+    <p class="demo"><i class="bi bi-phone me-1"></i>Call us now +1 5589 55488 55</p>
     </div> 
-
     <!-- HEADER-END -->
 
     <!-- NAVBAR-START -->
@@ -63,7 +66,9 @@
     <li><a href="#">DOCTORS</a></li>
     <li><a href="#">DROPDOWN</a></li>
     <li><a href="#">CONTACT</a></li>
+    <i class="ri-menu-line"></i>
     </ul>
+     <!-- <div class="menu-bar"><i class="ri-menu-line"></i></div> -->
     <button class="nav-bnt">Make an Appointment</button>
     </nav>
     </div>
@@ -72,7 +77,12 @@
 
     <!-- Banner / Hero Section-START -->
     <div class="box">
-    <img height="600" width="100%" src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+      <div><img height="600" width="100%" src="assets/img/hero-carousel/hero-carousel-1.jpg" alt=""></div>
+      <div class="fixed">
+      <h1 class="welcome-title11">Welcome to Medicio</h1>
+      <p class="welcome-subtitle12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <button class="read-btn">Read More</button>
+    </div>
     </div>
     <!-- Banner / Hero Section-END-->
 
