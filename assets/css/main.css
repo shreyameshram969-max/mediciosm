@@ -84,6 +84,9 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
+ p{ 
+margin: 0; 
+}
 
 h1,
 h2,
@@ -113,10 +116,8 @@ h6 {
   justify-content: space-between;
   background-color:var(--nav-dropdown-hover-color);
   color:var(--contrast-color);
-  padding-top: 1vw;
-  padding-left: 6vw;
-  padding-right: 6vw;
-  height:7vh;
+  padding: 0.8rem 6rem;
+  text-align: center;
 }
  @media (max-width:800px) {
   .header-info{
@@ -130,13 +131,26 @@ h6 {
 /* Nav-bar-start */
 
 .navbar{
- height: 10vh;
- background-color:var(--background-color);
+ /* background-color:var(--background-color); */
+ display: flex;
+ justify-content: space-between;
+  border: 1px solid red;
+  padding: 0.8rem 6rem;
+  text-align: center;
+}
+.navbar-logo{
+  border: 1px solid red;
+  width: 10rem;
+  padding: 0.8rem;
+}
+.navbar-logo img{
+width: 100%;
+/* height: 100%; */
 }
 
 .navbar li{
   list-style:none;
-  padding: 15px;
+  padding: 0px 15px;
   font-size: small;
   
 }
@@ -151,8 +165,7 @@ color:var(--accent-color);
 
 .nav-list{
 display: flex;
-justify-content: center;
-margin-right: -280px; 
+justify-content: space-between; 
 }
 
 .nav-list li:hover>a, .nav-list .active, .nav-list .active:focus{
@@ -160,8 +173,8 @@ margin-right: -280px;
 }
 
 .navbar img{
-  margin-left: 100px;
-  margin-bottom: 15px;
+  /* margin-left: 100px; */
+  /* margin-bottom: 15px; */
 }
 .nav-list i{
    display: none; 
@@ -184,11 +197,7 @@ margin-right: -280px;
   background-color: var(--accent-color);
   color: var(--contrast-color);
   border: none;
-  height: 5vh;
-  width: 12vw;
   border-radius: 4px;
-  margin-right: 7vw;
-  margin-bottom: 15px;
 }
 
 
